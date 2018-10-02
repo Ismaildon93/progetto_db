@@ -1,0 +1,1059 @@
+@charset "UTF-8";
+/****************************************************************
+*
+* Nome progetto: CINGUETTIO
+*                 File: style.css
+*              Scopo: definizione stile delle pagine pagine
+*         Creato da: Donà Ismail, Urso Francesco
+*               Anno: 2017/2018
+*       	
+* Ultima modifica: Giovedì 22 Giugno 2017
+*
+*      
+*****************************************************************/
+
+/*
+* ===================== ELEMENTI GENERICI =======================
+*/
+
+/* è un divisore vuoto che ha il compito di pulire il flusso da float left */
+.clear-float-left{clear: left;}
+
+/* è un divisore vuoto che ha il compito di pulire il flusso da float right */
+.clear-float-right{clear: right;}
+
+/* modal background */
+.modal {
+    
+    display: none; /* nascosta di default*/
+    position: fixed; 
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+    padding-top: 60px;
+}
+
+/* bottone di chiusura modal*/
+.close {
+    
+    margin-left: 95px;
+    bottom:10px;
+    color: #2D3343;
+    font-size: 40px;
+    font-weight: bold;
+    
+}
+
+/* bottone di chiusura in hover e in focus */
+.close:hover,
+.close:focus {
+    color: #DC2C46;
+    cursor: pointer;
+}
+
+/* stile di titoli */
+.titolo{
+
+    text-align:center;
+    color: #2D3343;
+    display: block;
+    font-family: Helvetica;
+
+}
+
+/* stile delle form modali */
+.modal-titolo{
+    
+    text-align:center;
+    color: #2D3343;
+    display: inline-block;
+    font-family: Helvetica;
+    margin-left: 120.14px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+
+/* tooltip utente esperto */
+.tooltip-esperto {
+    position: relative;
+    display: inline-block;
+    
+}
+
+/* testo tooltip utente esperto */
+.tooltip-esperto .tooltip-testo-esperto {
+    visibility: hidden;
+    width: 110px;
+    background-color: #F1C40F;
+    color: white;
+    text-align: center;
+    border-radius: 3px;
+    font-size:16px;
+    padding: 5px 0;
+    font-family: Helvetica;
+    /* Posizione del tooltip */
+    position: absolute;
+    z-index: 1;
+}
+
+/* tooltip visibile */
+.tooltip-esperto:hover .tooltip-testo-esperto {
+    visibility: visible;
+}
+
+/*
+* ===================== SEZIONE HTML E BODY =======================
+*/
+
+/* body del documento*/ 
+body {
+    height: 100%;
+    /* font-family: Helevetica; */
+    background-color: #E6E6E6;
+    margin: 8px 8px 8px 8px;
+    padding: 0;   /*sovrascrive i valori di default del browser*/
+}
+
+/* body dell'html */
+html {
+    display: block;
+    height: 100%;
+    margin: 0;
+}
+
+/*
+* ===================== SEZIONE HEADER ===========================
+*/
+
+/* barra dell'header */
+#header-barra{
+    
+    height: 50px;
+    padding: 0 35px; 
+    background:#2D3343;
+    display:block;
+  
+}
+
+/* logo immagine bandiera */
+#header-logo-bandiera{
+    
+    height: 75px;
+    width: 45px;
+    margin: 0;
+    padding: 0;
+    float: left;
+}
+
+/* divisore ricerca avanzata */
+#div-ricerca-avanzata{
+    
+    height: 21px;
+    width: 169px;
+    float:left; 
+    border: solid 1px white;
+    border-radius:3px;
+    margin-top: 16.45px;
+    margin-left: 10px;
+    padding: 1px;
+    cursor: pointer;
+}
+
+/* logo ricerca avanzata */
+#header-logo-ricerca-avanzata{
+    
+    height:15px;
+    width:15px;
+    margin: 2.5px 0 0 5px;
+    padding: 0;
+    float: left;
+    cursor: pointer;
+}
+
+/*scritta ricerca avanzata */
+#ricerca-avanzata-scritta{
+    
+    margin-top:10px;
+    margin-left: 5px;
+    font-family: Helvetica;
+    color:white;
+    font-size: 18px;
+}
+
+/* logo scritta "inguettio" affianco a bandiera */
+#header-logo-scritta{
+   
+    margin: 12px 0 0 3px; 
+    font-family: Helvetica;
+    font-weight:normal;
+    color: #E6E6E6;
+    float: left;
+    font-family:Helvetica;
+}
+
+/* stile dei links e del bottone registrazione per l'attivazione della form*/
+a.header-link:link,
+a.header-link:visited,
+button.header-registrazione-bottone,
+button.header-registrazione-bottone:visited {
+    
+    margin: 16.45px 0 0 8px;
+    padding: 4px 8px;
+    background-color: #2D3343;
+    border: solid #E6E6E6 1px;
+    border-radius: 10px;
+    font-family:Helvetica;
+    font-size:15px;
+    color: #E6E6E6;
+    text-align: center; 
+    text-decoration: none;
+    float: right;
+    cursor: pointer;
+}
+
+/* stile dei links e del bottone di attivazione della registrazione in active e hover */
+a.header-link:hover,
+a.header-link:active,
+button.header-registrazione-bottone:hover,
+button.header-registrazione-bottone:active,
+button.header-registrazione-bottone:focus{
+    
+    outline: none;
+    background-color:#DC2C46;
+    color: #E6E6E6;       
+    font-family:Helvetica;
+}
+ 
+/* barra di ricerca */
+#header-input-ricerca {
+    
+    height: 25px;
+    width: 17%;
+    margin: 16.45px 0 0 5px;
+    padding: 0 12px 0 24px;
+    border: 2px solid #ccc;
+    border-right: none;
+    border-radius: 3px 0 0 3px;
+    background: url("../img/icone/icona_barra_ricerca.png") no-repeat white left;
+    float: left;
+    font-family:Helvetica;
+    color:#2D3343;
+    font-size: 17px;
+}
+
+/* barra di ricerca focus e hover */
+#header-input-ricerca:focus{
+    
+    outline: none;
+    border-color: #DC2C46;
+    font-family:Helvetica;
+    
+} 
+
+/* submit barra di ricerca */
+#header-submit-ricerca {
+    
+    height: 25px;
+    width: 80px;
+    margin: 16.45px 0 0 0;
+    padding: 0 12px 0px 12px;
+    background: #DC2C46;
+    outline: none;
+    border: 2px solid #DC2C46;
+    border-radius: 0 3px 3px 0;
+    text-align:center;
+    color: white;
+    border-left: none;
+    cursor: pointer;
+    float:left;
+    font-family:Helvetica;
+}
+
+/*
+* ===================== SEZIONE ASIDE  ================================
+*/
+
+/* stile della aside */
+#aside {
+    
+    display:table;
+    margin-top:32px;
+    margin-left: 35px;
+    margin-right: 50px;
+    float:left;
+    
+}
+
+/* testo dell'aside */
+.aside-testo {
+	
+    text-align: center;
+    font-family: helvetica;
+    font-size: 20px;
+    color: #2D3343;
+}
+
+
+/* contenitirore dell'imagine profilo */
+.profilo-img-container {
+    
+    width:267px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    display: table;
+    margin-bottom:25px;
+    
+}
+
+/* contenitirore dell'imagine profilo utente esperto */
+.profilo-img-container.profilo-esperto {
+    
+    background-color: #F1C40F;
+    color:white;
+}
+/* dimensioni delle immagini profilo */
+.img-profilo-dim{ 
+    
+    border-radius: 100%;
+    width: 234px;
+    height: 234px;
+    margin-bottom: 20px;
+    margin-left: 16.5px;
+}
+
+/* imposta n pointer sull'immagine profilo */
+.img-profilo-dim.pointer{
+    cursor: pointer;
+}
+
+
+/* contentitore di pubblica */
+.pubblica {
+   
+    height: 50px;
+    padding: 10px;
+    background-color: white;
+    border-radius: 10px;
+    display: table;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+/* stile di bottoni */
+button.button{
+  
+    width: 71.5px;
+    padding: 10px 0px;
+    background-color: #2D3343;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    color: white;
+    float: left;
+    outline: none;
+    font-family: Helvetica;
+    text-align:center;
+    margin-right:11.99px;
+    margin-left:11.99px;
+    margin-top: 10px;
+}
+
+/* stile dei bottoni */
+button.button:hover{background-color: #DC2C46;}
+
+/* link dell'aside */
+a.link-aside:link,
+a.link-aside:visited{
+    
+    width: 287px;
+    background-color: #2D3343;
+    display: table;
+    color: white;
+    font-family: Helvetica;
+    font-size: 25px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    padding: 4px 10px;
+    cursor: pointer;
+    text-decoration: none;
+    outline:none;
+}
+
+/* link dell'aside in hover e active */
+a.link-aside:hover,
+a.link-aside:active{
+    outline: none;
+    background-color:#DC2C46;
+    color: white;       
+    font-family:Helvetica;
+    text-decoration: none;
+}
+
+/* sfondo fisso rosso nel caso siamo nella pagina utentiSeguaci,seguiti,luoghi preferiti, richieste*/
+a.link-aside-seguaci,
+a.link-aside-seguiti,
+a.link-aside-richieste,
+a.link-aside-luogo-preferito{
+    width: 287px;
+    background-color: #DC2C46;
+    display: table;
+    color: white;
+    font-family: Helvetica;
+    font-size: 25px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    padding: 4px 10px;
+    cursor: pointer;
+    text-decoration: none;
+    outline:none;
+}
+
+/* stile del numero di utenti seguiti e seguaci */
+.link-numero{
+   
+    font-size: 25px;
+    margin: 0px;
+    float:right;
+    color: #DC2C46;
+}
+
+/* contenitore dei cinguettii */
+#cinguettio-container {
+    
+    font-family: Helvetica;
+    height: 150px;
+    width: 500px;
+    margin:auto;
+    margin-top: 55px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    display: table;
+}
+
+/* stile del campo textarea */
+textarea.textarea{
+    
+    font-family: Helvetica;
+    font-size:25px;
+    height: 50px;
+    width: 400px;
+    margin: 15px auto;
+    padding: 20px;
+    background-color: white;
+    border: solid #ccc 1px;
+    border-radius: 3px;
+    display: block;
+    outline-color: #DC2C46;
+    outline-width: 1px;
+    overflow-y: scroll;
+    resize:none;
+}
+
+/*
+* ======================= SEZIONE RICERCA UTENTE =========================
+*/
+
+/* contenitore dell' elenco utenti ricercati */
+#ricerca-utenti-container{
+
+    margin-left: 35px;
+    margin-top: 32px;    
+    display: table; 
+}
+
+/* bottone per seguire e smettere di seguire un utente */
+.button-segui,
+.button-smetti-di-seguire  {
+    
+    font-family:Helvetica;
+    background-color: #2D3343;
+    font-size: 16px;
+    margin: 20px auto 0px auto;
+    color:white;
+    padding: 10px;
+    border:none;
+    outline:none;
+    border-radius:3px;
+    display: block;
+    cursor:pointer;
+}
+
+/* bottoni per accetare una richiesta */
+.button-accetta-richiesta{
+    
+    font-family:Helvetica;
+    background-color: #2D3343;
+    font-size: 16px;
+    margin: 20px 0px 0px;
+    color:white;
+    padding: 7px;
+    border:none;
+    outline:none;
+    border-radius:3px;
+    display: inline-block;
+    cursor:pointer;
+    width:110px;
+}
+
+.button-rifiuta-richiesta{
+    
+    font-family:Helvetica;
+    background-color: #2D3343;
+    font-size: 16px;
+    margin: 20px 0px 0px 42px;
+    color:white;
+    padding: 7px;
+    border:none;
+    outline:none;
+    border-radius:3px;
+    display: inline-block;
+    cursor:pointer;
+    width:110px;
+}
+
+/* riquadro di richiesta attesa */
+.richiesta-attesa{
+    
+    font-family:Helvetica;
+    background-color: #E6E6E6;
+    font-size: 16px;
+    margin: 20px auto 0px auto;
+    color:grey;
+    padding: 10px;
+    border:none;
+    outline:none;
+    border-radius:3px;
+    display: block;
+    text-align: center;
+    cursor:default;
+
+}
+
+/* bottoni e richiesta attesa in hover */
+.button-segui:hover,
+.button-smetti-di-seguire:hover,
+.richiesta-attesa:hover,
+.button-accetta-richiesta:hover,
+.button-rifiuta-richiesta:hover{
+    
+    background-color: #DC2C46;
+    color: white;
+}
+
+/* stile la ricerca non ha portato a nessun risultato */
+h1.no-ris{
+    
+    color:#2D3343;
+    font-size: 40px;
+    font-family: Helvetica;
+    text-align: center;
+    
+}
+
+/*
+* ===================== SEZIONE DATI UTENTE ==============================
+*/
+
+.numero-seguaci,.numero-seguiti {
+    
+    width: 287px;
+    background-color: #2D3343;
+    display: block;
+    color: white;
+    font-family: Helvetica;
+    font-size: 25px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    padding: 4px 10px;
+    
+}
+
+.valore-numero{
+    
+    font-size: 25px;
+    margin: 0px;
+    float:right;
+    color: #DC2C46;
+}
+/*
+* ===================== SEZIONE POST ===================================
+*/
+
+/* contenitore di tutti i post */
+#post-container{
+    
+    display: table;   
+    margin-top: 32px;
+}
+
+/* contenitore del post foto*/
+.post-foto-container,
+.post-testo-container,
+.post-luogo-container{
+    
+    padding: 10px 10px 25px 10px;
+    background-color: white; 
+    margin-bottom: 50px;
+    border-radius: 10px;
+    width: 750px;
+    height: auto;
+    display:block;
+    
+}
+
+/* stile della foto */
+.post-foto{
+    
+    margin-top: 10px;
+    height:300px;
+    width: 300px;
+    border-radius: 3px;
+    margin-left:70px;
+    float:left;
+    
+
+}
+
+/* stile della descrizione della foto */
+.post-descrizione-foto{
+    
+    font-family:Helvetica;
+    color: #2D3343;
+    font-size: 22.5px;
+    display:block;
+    margin-top: 10px;
+    margin-left: 70px;
+}
+
+/* commenti */
+.commenti {
+    
+    background-color: #2D3343;
+    color: white;
+    padding: 10px;
+    font-size: 20px;
+    width: 300px;
+    border-radius: 3px;
+    margin-top: 10px;
+    margin-left: 20px;
+    display:inline-block;
+    text-align:center;
+    font-family:Helvetica;
+    
+}
+
+/* numero di commenti */
+.numero-commenti{
+    
+    font-family:Helvetica;
+    font-size: 20px;
+    color: #DC2C46;
+}
+
+/* lista dei commenti */
+.lista-commenti {
+    
+    height: 190px;
+    width: 320px;
+    display: inline-block;
+    background-color: #E6E6E6;
+    border-radius: 3px;
+    margin-left: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-family:Helvetica;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    
+}
+
+/* bottone inserimento commenti */
+.inserimento-commento {
+    
+    background-color: #2D3343;
+    color: white;
+    padding:10px;
+    font-size: 20px;
+    border:none;
+    cursor: pointer;    
+    border-radius: 3px;
+    outline:none;
+    display:inline-block;
+    font-family: Helvetica;
+    margin-top: 0;
+    margin-left: 69.96px;
+}
+
+/* link dei singoli commenti */
+a.link-commenti,a.link-utenti {
+    color: #2D3343;
+    padding: 12px 16px;
+    text-decoration: none;
+    display:block;
+
+}
+/* link dei commenti in hover */
+a:hover.link-commenti,a:hover.link-utenti {background-color: #DC2C46; color: white;}
+ 
+/* stile del contenuto dei commenti */
+.nickname-commento{font-size:12px; float: left; color:white; margin-bottom:10px;}
+.data-commento{font-size:12px; float: right; color:white;}
+.testo-commento,utenti {font-size:15px; clear:left; display:block; height: auto; width:auto; word-wrap: break-word;}
+
+/* stile dei messaggi di testo */
+.post-messaggio {
+    margin-top: 25px;
+    margin-bottom: 20px;
+    margin-left:70px;
+    word-wrap: break-word;
+    font-family: Helvetica;
+    font-size: 25px;
+    width: auto;
+    height: auto;
+    color: #2D3343;
+}
+
+.post-luogo-latitudine-longitudine{
+    
+     margin-top: 25px;
+    margin-bottom: 20px;
+    margin-left:70px;
+    word-wrap: break-word;
+    font-family: Helvetica;
+    font-size: 30px;
+    width: auto;
+    height: auto;
+    color: #2D3343;
+    
+}
+
+/* banda dei post */
+.post-profilo-container{
+
+    background-color: #2D3343;
+    padding:10px;
+    border-radius: 3px 3px 0 0px; 
+    display:block;
+
+}
+
+/* colore della banda nel caso di un utente esperto */
+.post-profilo-container.utente-esperto{
+    background-color: #F1C40F;
+    
+}
+/* colore della banda dei post nel caso di post testuali segnalati come inappropriati */
+.post-profilo-container.testo-segnalato  {
+    background-color: #DC2C46;
+}
+
+/* dropdown list degli utenti che hanno segnalato il post testuale */
+.lista-utenti{
+    
+    display: none;
+    width: 240px;
+    background-color: #E6E6E6;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    font-family:Helvetica;
+    border-radius: 0 0 3px 3px;
+    text-align:left;
+    position:absolute;
+    margin-left: -10px;
+    margin-top: 9px;
+    word-wrap: break-word;
+}
+
+/* box dei mesaggi testuali segnalati */
+div.segnalato-da{
+    
+    font-family:Helvetica;
+    background-color: #DC2C46;
+    color:white;
+    height:auto;
+    width: 220px;
+    text-align: center;
+    padding: 10px;
+    display: inline-block;
+    font-size: 17px;
+    border-radius: 3px;
+    float:right;
+}
+
+/* style del pulsante segnala testo */
+.segnala-testo,
+.luogo-preferito{
+    
+    font-family:Helvetica;
+    background-color: #2D3343;
+    color:white;
+    width: 220px;
+    text-align: center;
+    font-size: 17px;
+    padding: 10px;
+    display: inline-block;
+    border: none;
+    outline:none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+/* stile della form per la segnalazione del testo */
+.segnala-testo-form,luogo-preferito-form{
+
+    display: inline-block;
+}
+
+/* quando si passa in hover sul box segnala testo viene mostrata la lista utenti segnalati */
+div.segnalato-da:hover .lista-utenti{
+    display: block;
+}
+
+/* style dell'imagine profilo nei post */
+.post-profilo-img{
+    
+    height: 50px;
+    width: 50px;
+    border-radius: 100%;
+    float:left;
+    margin-right:10px;
+    margin-top: -5px;
+}
+
+/* stile delle scritte nickname */
+.post-profilo-scritta{
+    
+    font-family:Helvetica;
+    font-size: 20px;
+    text-align:center;
+    color:white;
+    display: inline-block;
+    
+}
+
+/* stile della data del post */
+.post-profilo-data{
+    
+    font-family:Helvetica;
+    font-size: 17px;
+    text-align:center;
+    color:white;
+    display: inline-block;
+    float:right;
+    margin-top:2.5px;
+}
+    
+/*stile dell scritta nessun post*/
+h1.no-post{
+    color:#2D3343;
+    font-size: 40px;
+    font-family: Helvetica;
+    display:inline-block;
+}
+
+/*
+* ===================== SEZIONE FORM DI LOGIN E REGISTRAZIONE =========
+*/
+
+/* contenitore della form di login e di registrazione*/
+div#login-registrazione-container {
+    
+    height: 150px;
+    width: 500px;
+    margin: 100px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    display: table;
+    font-family: Helvetica;
+}
+
+/* input email, password e text della form di login e registrazione*/
+input[type=email].login-registrazione-input,
+input[type=password].login-registrazione-input,
+input[type=text].login-registrazione-input,
+input[type=file].login-registrazione-input{
+    
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    padding: 12px 20px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    box-sizing: border-box;
+    display: block;
+    outline-color: #DC2C46;
+    outline-width: 1px;
+    font-family: Helvetica;
+    font-size: 17px;
+    color: #2D3343;
+    
+}
+
+/* submit della form di login e registrazione*/
+input[type=submit].login-registrazione-submit {
+    
+    width: 30%; 
+    margin: 10px 10px 0 90px;
+    padding: 10px 20px;
+    background-color: #2D3343;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    color: white;
+    float: left;
+    outline: none;
+    font-family: Helvetica;
+}
+
+/* bottone reset della form di login e registrazione*/
+input[type=reset].login-registrazione-reset {
+    
+    width: 30%;
+    margin: 10px 0 0 10px;
+    padding: 10px 20px;
+    background-color: #DC2C46;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    color: white;
+    float:left;
+    outline: none;
+    font-family: Helvetica;
+}
+
+/* colore del messaggio di errore per la login o la registrazione*/
+p.error-email, p.error-password {
+    
+    font-weight: bold;
+    display: block;
+    color: #DC2C46;
+    font-family: Helvetica;
+}
+
+/* colore del messaggio di errore per la login o la registrazione*/
+h1.errore-login-registrazione {
+    
+    color:#DC2C46;
+    text-align:center;
+    font-family: Helvetica;
+} 
+
+/* cambia il bordo degli input in caso di errore */
+input[type=email].login-registrazione-input-errore,
+input[type=password].login-registrazione-input-errore{
+    
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    padding: 12px 20px;
+    border: 2px solid #DC2C46;
+    border-radius: 3px;
+    box-sizing: border-box;
+    display: block;
+    font-family: Helvetica;
+}
+
+
+/*
+* =================== SEZIONE DEL PROFILO UTENTE ==========================
+*/
+
+/* definisce lo stile del fildset*/
+.fildset-style {
+
+    border: solid #E6E6E6 2px;
+    border-radius: 4px;
+    text-align: left;
+    margin-bottom: 10px;
+    margin-top: 20px;
+}
+
+li { font-size:18px; font-family:Helvetica; margin-bottom: 10px;}
+
+/* definisce lo stile della leggenda */
+legend{
+    
+    font-family:Helvetica;
+    text-align:center;
+    color: #2D3343;
+}
+
+/* definisce lo stile dei label */
+label { color: #2D3343;}
+
+/* definisce lo stile dei checkbox */
+.checkbox-input {
+    
+    width:40px;
+    height: 16px;
+    position:relative;
+    left: 50px; 
+    vertical-align:middle;
+    margin-bottom: 8px;
+    margin-top: 12px;
+    outline: none;
+}
+
+/* definisce lo stile dei checkbox labels */
+.checkbox-label {
+    
+    width:80px;       
+    position:relative;
+    left: 37px;
+    display:inline-block;    
+    vertical-align:middle; 
+    margin-bottom: 8px;
+    margin-top: 12px;
+    color:#2D3343;
+}
+
+/* definisce lo stile degli input di tipo radio */
+.radio-input{margin-bottom: 10px;}
+
+/* definisce lo stile della select */
+.select-style {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 12px 20px;
+    border: 1px solid #ccc;
+    font-family: Helvetica;
+    display: inline-block;
+    border-radius: 3px;
+    outline-color: #DC2C46;
+    outline-width: 1px;
+    text-align:center;
+    margin-right: 10px;
+    color:#2D3343;
+    font-size: 15px;
+}
+
+/*
+* =================== SEZIONE PAGINA ERRORI ==========================
+*/
+
+/* stile dei messaggi di errore nella pagina error.php */
+p.msg-errore {
+    
+    color:#DC2C46;
+    text-align:center;
+    font-family: Helvetica;
+    font-size:30px;
+}
+
+a.link-msg-errore:link, 
+a.link-msg-errore:visited{    
+    color:#2D3343;
+    text-align:center;
+    font-family: Helvetica;
+    font-size:30px;
+    
+}
